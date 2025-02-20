@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: white;
+    border-bottom: 2px solid #000;
+    z-index: 1000;
+}
+
+.nav-left,
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-bottom: none !important;
+}
+
+.nav-text {
+    transition: all 0.3s ease;
+}
+
+#the {
+    background-color: #BFD1C7;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.nav-text:hover {
+    background-color: #BFD1C7;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.user-icon:hover .menu-img {
+    transform: translateY(-3px);
+}
+
+/* 搜索框样式 */
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    margin: 0 0px;
+    background-color: transparent;
+    padding: 8px 8px;
+    border-radius: 4px;
+}
+
+
+.search-icon {
+    position: absolute;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    opacity: 0.8;
+}
+
+.search-input {
+    border-radius: 7px 7px 7px 7px !important;
+    width: 100% !important;
+    /* 继承容器宽度 */
+    height: 100%;
+    background: transparent !important;
+    /* 去除背景色 */
+    border: 1px solid #000 !important;
+    /* 始终显示边框 */
+    box-shadow: none !important;
+    border-radius: 8px 8px 8px 8px;
+    padding: 0 40px 0 20px !important;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #000 !important;
+    outline: none !important;
+    /* 移除默认轮廓 */
+    box-shadow: none !important;
+    outline-offset: -2px;
+    /* 防止位移 */
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 180px;
+    height: calc(100vh - 60px);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-items {
+    flex-grow: 1;
+
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 14px 40px;
+    border-radius: 0;
+}
+
+.menu-item:hover {
+    background: #C8B4C8;
+    box-shadow: inset 0 0 0 1000px #C8B4C8;
+    /* 增强覆盖效果 */
+}
+
+.menu-item .icon {
+    width: 20px;
+    height: 20px;
+    background: #eee;
+}
+
+.settings {
+    margin-top: auto;
+}
+
+.menu-img {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transition: transform 0.2s ease
+}
+
+.menu-item:hover .menu-img {
+    transform: translateX(3px);
+}
+
+.menu-text,
+.author-icon {
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    /* 保证对齐 */
+}
+
+/* 瀑布流样式 */
+.g-container {
+    position: relative;
+    margin-left: 220px;
+    margin-right: 100px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5列布局 */
+    gap: 20px;
+    /* 项目间距 */
+    grid-auto-flow: dense;
+    /* 紧密填充空白区域 */
+}
+
+
+.item {
+    break-inside: avoid;
+    /* 防止内容断裂 */
+    border-radius: 12px 12px 12px 12px;
+    /* padding: 15px 0 0 15px; */
+    margin: 10px;
+    padding: 7px;
+    position: relative;
+}
+
+.item:hover {
+    background: #BFD1C7;
+}
+
+.mask {
+    margin: 0;
+    width: 100%;
+    min-height: 130px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    /* 文字区域间距 */
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    background: transparent;
+    z-index: 2;
+}
+
+.it-img {
+    border: #000 solid 2px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    min-height: 130px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    /* 添加白色背景层 */
+    background-clip: padding-box;
+    z-index: 0;
+}
+
+.big-circle {
+
+    position: absolute;
+    width: 70%;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    border-radius: 50%;
+    left: -200%;
+    top: 200%;
+    transition: all 0.3s ease;
+    /* 添加直径线并控制层级 */
+    background: radial-gradient(circle at 66.6% 30%, transparent 15%, #BFD1C7 15%) !important;
+    background:
+        linear-gradient(0deg, #BFD1C7, #BFD1C7, #BFD1C7, #BFD1C7),
+        linear-gradient(90deg, #BFD1C7, #BFD1C7, #BFD1C7, #BFD1C7);
+
+    z-index: 2;
+}
+
+/* 直径线覆盖层 */
+.diameter-line {
+    position: absolute;
+    background: #BFD1C7;
+    z-index: 2;
+}
+
+.horizontal-line {
+
+    width: calc(100% + 4px);
+    /* 覆盖内边框 */
+    height: 2px;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-1px);
+}
+
+.vertical-line {
+    width: 2px;
+    height: calc(100% + 4px);
+    /* 覆盖内边框 */
+    left: 50%;
+    top: -2px;
+    transform: translateX(-1px);
+}
+
+.small-circle {
+    position: absolute;
+    left: 66.6%;
+    top: 30%;
+    width: 30%;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.user-p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.item:hover .big-circle {
+    /* 精确对齐内边框 */
+    left: 0;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* 调整图片缩放效果 */
+.it-img:hover .it-img-src {
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+.it-img-src {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    /* 悬停动画 */
+    display: block;
+    z-index: 0;
+}
+
+.it-img:hover .it-img-src {
+    transform: scale(1.05);
+}
+
+.author-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 爱心样式 */
+.like-btn .heart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.like-btn .heart::before,
+.like-btn .heart::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    width: 12px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 12px 12px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    transition: all 0.3s ease;
+}
+
+.like-btn .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* 点击后效果 */
+.like-btn.active .heart::before,
+.like-btn.active .heart::after {
+    background: #ff3860;
+}
+
+.like-btn.active .heart {
+    transform: scale(1.2);
+}

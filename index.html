@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒语SeeU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 左侧Logo和文字 -->
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">舒语SeeU</span>
+        </div>
+
+        <!-- 中间导航项 -->
+        <div class="nav-center">
+            <a href="#home" class="nav-item">首页</a>
+            <a href="#period" class="nav-item">我的经期</a>
+            <a href="#contact" class="nav-item">联系我们</a>
+            <a href="#privacy" class="nav-item">隐私策略</a>
+            <a href="#terms" class="nav-item">使用条款</a>
+        </div>
+
+        <!-- 右侧图标 -->
+        <div class="nav-right">
+            <img src="./images/6.png" alt="图标1" class="nav-icon">
+            <img src="./images/user.png" alt="图标2" class="nav-icon">
+            <img src="./images/5.png" alt="图标3" class="nav-icon">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-panel">
+            <div id="big-circle"></div>
+        </div>
+
+        <div class="right-content">
+            <div class="info-search-container">
+                <div class="info-dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown()">
+                        <div class="info-title-group">
+                            <h2>今日资讯</h2>
+                            <img src="./images/placeholder.png" alt="状态指示" class="info-icon">
+                        </div>
+                    </div>
+                    <div class="dropdown-table">
+                        <div class="dropdown-content">
+                            <p>今日推荐：经期健康小贴士</p>
+                            <p>最新活动：会员专属优惠</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧搜索框 -->
+                <div class="search-container">
+                    <input type="text" oninput="filterCards(this.value)" class="search-input">
+                    <img src="./images/search.png" alt="搜索" class="search-icon">
+                </div>
+            </div>
+            <!-- 功能卡片容器 -->
+            <div class="card-container">
+                <!-- 共享社区 -->
+                <div class="new-card card-1" id="one">
+                    <div class="image">
+
+                    </div>
+                    <div class="card-content">
+                        <h3>共享社区</h3>
+                        <p>在这里，大家可以随时互动与交流，打造温馨舒适的社区环境</p>
+                    </div>
+                </div>
+
+                <!-- 购物中心 -->
+                <div class="new-card card-2" id="two">
+                    <div class="image">
+
+                    </div>
+                    <div class="card-content">
+                        <h3>购物中心</h3>
+                        <p>提供多样化商品与优惠，满足您的购物需求，轻松愉快购物</p>
+                    </div>
+                </div>
+
+                <!-- 专家咨询 -->
+                <div class="new-card card-3">
+                    <div class="image">
+
+                    </div>
+                    <div class="card-content">
+                        <h3>专家咨询</h3>
+                        <p>链接行业专家，提供实用建议与专业解答，为您解决难题</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

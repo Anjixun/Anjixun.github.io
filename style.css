@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SimHei', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+}
+
+/* 导航栏 */
+.navbar {
+    height: 95px;
+    background: #FFFFFF;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+/* 左侧Logo区域 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 260px;
+    /* 固定左侧宽度 */
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 25pt;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    /* 增大导航间距 */
+}
+
+/* 中间导航项 */
+.nav-center {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    left: auto;
+    transform: none;
+}
+
+.nav-item {
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #855985;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #855985;
+    transition: width 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* 右侧图标区域 */
+.nav-right {
+    display: flex;
+    gap: 25px;
+    width: 260px;
+    /* 固定右侧宽度 */
+    justify-content: flex-end;
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-item.active {
+    color: #855985;
+}
+
+.nav-item.active::after {
+    width: 100%;
+}
+
+
+
+
+.container {
+    margin-top: 95px;
+    min-height: calc(100vh - 95px);
+    background: #F9F9F9;
+    /* 添加页面背景色 */
+}
+
+/* 左侧面板调整 */
+.left-panel {
+    width: 255px;
+    background: #FFFFFF;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    /* 添加右侧投影 */
+    position: fixed;
+    height: calc(100vh - 95px);
+}
+
+/* 右侧内容区重构 */
+.right-content {
+    flex: 1;
+    margin-left: 255px;
+    padding: 40px;
+}
+
+
+.dropdown-table {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-table.active {
+    max-height: 200px;
+    /* 根据内容高度调整 */
+}
+
+.dropdown-content {
+    padding: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.info-dropdown {
+    margin: 0;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.info-dropdown h2 {
+    font-size: 26px;
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+}
+
+.info-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    /* 移除间隔 */
+}
+
+.info-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.info-search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    gap: 15px;
+    align-items: flex-start;
+    /* 保证垂直对齐 */
+}
+
+/* 调整下拉头部样式 */
+.dropdown-header {
+    padding: 10px 12px;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 170px;
+    border: none;
+    /* 新增 */
+}
+
+
+
+/* 搜索容器扩展样式 */
+.search-container {
+    flex: 1;
+    max-width: 669px;
+    display: flex;
+    justify-content: center;
+    width: 669px;
+    /* 精确宽度 */
+    margin: 0 auto;
+    /* 水平居中 */
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.search-icon:hover {
+    opacity: 0.8;
+}
+
+.search-input {
+    border: none !important;
+    /* 去除边框 */
+    background: #F1F1F1 !important;
+    /* 设置填充色 */
+    padding: 0 20px;
+    /* 优化内边距 */
+    height: 42px;
+    /* 微调高度 */
+    width: 669px;
+    box-shadow: none !important;
+    /* 去除默认阴影 */
+    border-radius: 8px 8px 8px 8px;
+    padding-right: 50px !important;
+    /* 为图标预留空间 */
+}
+
+.search-input:focus {
+    outline: 2px solid #F1F1F1;
+    /* 添加轮廓线 */
+    outline-offset: -2px;
+    /* 防止位移 */
+}
+
+
+/* 功能卡片 */
+
+.service-card,
+.service-card::before,
+.service-card:hover {
+    all: unset;
+}
+
+/* 新卡片容器布局 */
+.card-container {
+    display: flex;
+    gap: 30px;
+    /* 卡片间距 */
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* 卡片文字容器 */
+.new-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 内容靠底排列 */
+    padding: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* 文字内容容器 */
+.card-content {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+    margin-top: auto;
+    /* 推到卡片底部 */
+}
+
+/* 悬停效果 */
+.new-card:hover {
+    transform: translateY(-8px);
+    /* 强制覆盖原有颜色 */
+    background: #855985 !important;
+    width: 334px !important;
+    height: 498px !important;
+    margin-top: -23px !important;
+    z-index: 2;
+    /* 确保上层显示 */
+    box-shadow: 0 8px 20px rgba(133, 89, 133, 0.3);
+    /* 阴影 */
+}
+
+/* 各卡片具体尺寸和颜色 */
+.card-1 {
+    width: 303px;
+    height: 452px;
+    background: #C8ADAE;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.card-2 {
+    width: 303px;
+    height: 452px;
+    background: #C8ADAE;
+    border-radius: 16px 16px 16px 16px;
+}
+
+
+.card-3 {
+    width: 303px;
+    height: 452px;
+    background: #C8ADAE;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.new-card .image {
+    width: 259px;
+    /* 宽度设置为 259px */
+    height: 290px;
+    /* 高度设置为 290px */
+    position: absolute;
+    /* 设为绝对定位 */
+    top: 22px;
+    /* 距上方 22px */
+    bottom: 140px;
+    /* 距下方 140px */
+    left: 0;
+    /* 左右居中辅助 */
+    right: 0;
+    /* 左右居中辅助 */
+    margin: 0 auto;
+    /* 左右居中 */
+    background-color: #ffffff;
+    /* 可选：添加背景色以便查看效果 */
+    border-radius: 16px 16px 16px 16px;
+    transition: all 0.3s ease;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.new-card:hover .image {
+    width: 285px !important;
+    height: 318px !important;
+    top: 22px !important;
+    bottom: 140px !important;
+    border-radius: 16px;
+}
+
+.new-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 确保图片不变形 */
+}
+
+
+/* 标题样式 */
+.new-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 0 7px 0;
+    color: #ffffff;
+    line-height: 1.2;
+    flex-shrink: 1;
+}
+
+/* 段落样式 */
+.new-card p {
+    font-family: 'STZhongsong', serif;
+    /* 华文中宋 */
+    font-size: 16px;
+    text-align: left;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.6;
+    flex-shrink: 1;
+}
+
+/* 新增动画相关样式 */
+#big-circle {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    background-image: linear-gradient(to top,
+            #562385 0%,
+            #855985 40%,
+            rgba(255, 255, 255, 0.1) 90%,
+            rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -96px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.left-panel {
+    position: relative;
+    /* 添加相对定位容器 */
+}
+
+.bubble,
+.fixed-bubble {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4D7CE;
+}
+
+.bubble {
+    width: 48px;
+    height: 48px;
+    animation: float 7s ease-in-out forwards;
+    z-index: 1;
+}
+
+.fixed-bubble {
+    width: 48px;
+    height: 48px;
+    z-index: 2;
+}
+
+.bubble-img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+/* 调整左侧面板样式 */
+.left-panel {
+    width: 255px;
+    background: #FFFFFF;
+    position: fixed;
+    height: calc(100vh - 95px);
+    overflow: hidden;
+    /* 添加overflow隐藏 */
+}
+
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* 响应式优化 */
+@media (max-width: 1024px) {
+
+    .nav-left,
+    .nav-right {
+        width: auto;
+        /* 取消固定宽度 */
+    }
+
+    .nav-center {
+        gap: 20px;
+        /* 减小导航间距 */
+    }
+
+    .nav-item {
+        font-size: 20px;
+        /* 减小字体大小 */
+    }
+
+    .left-panel {
+        width: 200px;
+        /* 减小侧边栏宽度 */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+        /* 减小导航栏内边距 */
+    }
+
+    .nav-center {
+        display: none;
+        /* 隐藏导航栏中间部分 */
+    }
+
+    .left-panel {
+        display: none;
+        /* 隐藏侧边栏 */
+    }
+
+    .right-content {
+        margin-left: 0;
+        /* 调整右侧内容区的宽度和内边距 */
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .right-content {
+        padding: 50px 10%;
+        /* 大屏增加两侧留白 */
+    }
+
+    .info-search-container {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    /* 可折叠的移动菜单 */
+    .nav-center {
+        position: fixed;
+        top: 95px;
+        left: -100%;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        transition: left 0.3s;
+    }
+
+    .nav-center.active {
+        left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .info-search-container {
+        padding: 20px 10%;
+        gap: 20px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-dropdown {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .search-container {
+        width: 500px;
+    }
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+    .card-container {
+        flex-wrap: nowrap;
+        /* 保持水平排列 */
+        overflow-x: auto;
+        /* 添加横向滚动 */
+        padding-bottom: 20px;
+        /* 增加滚动空间 */
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-card {
+        width: 100% !important;
+        height: 300px !important;
+        max-width: 334px;
+    }
+
+    .card-2 {
+        height: 340px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .left-panel,
+    #big-circle {
+        /* 新增选择器 */
+        display: none !important;
+    }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .new-card {
+        height: 452px !important;
+        /* 保持原始高度 */
+        min-width: 303px;
+        /* 防止宽度压缩 */
+    }
+
+    .card-2 {
+        height: 498px !important;
+        min-width: 334px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .new-card h3 {
+        font-size: 28pt;
+        /* 适当缩小字号 */
+    }
+
+    .new-card p {
+        font-size: 16pt;
+    }
+}
+
+@font-face {
+    font-family: 'STZhongsong';
+    src: url('path/to/STZhongsong.ttf');
+    /* 需替换为实际字体文件路径 */
+}
