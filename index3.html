@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒语SeeU</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 左侧Logo和文字 -->
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">舒语SeeU</span>
+        </div>
+
+        <!-- 中间导航项 -->
+        <div class="nav-center">
+            <a href="#home" class="nav-item">首页</a>
+            <a href="#period" class="nav-item">我的经期</a>
+            <a href="#privacy" class="nav-item">隐私策略</a>
+            <a href="#terms" class="nav-item">使用条款</a>
+            <div class="contact-dropdown-wrapper">
+                <a href="#contact" class="nav-item">联系我们</a>
+                <div class="dropdown-container">
+                    <img src="./images/placeholder.png" alt="菜单" class="dropdown-icon">
+                    <div class="dropdown-form">
+                        <form>
+                            <input type="text" placeholder="姓名">
+                            <input type="email" placeholder="邮箱">
+                            <textarea placeholder="留言..."></textarea>
+                            <button type="submit">发送</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧图标 -->
+        <div class="nav-right">
+            <img src="./images/6.png" alt="图标1" class="nav-icon">
+            <img src="./images/user.png" alt="图标2" class="nav-icon">
+            <img src="./images/search.png" alt="图标3" class="nav-icon">
+        </div>
+    </nav>
+
+    <div class="background">
+        <div class="words">
+            <img src="./images/word.png" alt="" class="title-en">
+            <div class="title-cn">她健康她力量</div>
+        </div>
+        <div class="button">
+            <a href="#" class="btn" id="btn">进入主页</a>
+        </div>
+        <div class="cartoon">
+            <svg style="display: none;">
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                    <feColorMatrix in="blur" type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 35 -10" />
+                </filter>
+            </svg>
+            <canvas id="liquidCanvas"></canvas>
+        </div>
+        <div class="photo">
+            <img src="./images/back.png" alt="" class="back-img">
+        </div>
+
+    </div>
+
+
+</body>
+<script src="script3.js"></script>
+
+</html>

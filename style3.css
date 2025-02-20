@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SimHei', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    font-size: 0.9vw;
+    /* 基础缩放单位 */
+}
+
+.navbar {
+    height: 6rem;
+    background: #EFECF2;
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+    /* 底部黑色实线 */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* 左侧Logo区域 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 260px;
+    /* 固定左侧宽度 */
+}
+
+.logo-img {
+    height: 50px;
+    /* 根据实际图片比例调整 */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 2.5rem !important;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+/* 中间导航项 */
+.nav-center {
+    display: flex;
+    gap: 3vw;
+    position: relative;
+    left: auto;
+    transform: none;
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #855985;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #855985;
+    transition: width 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* 右侧图标区域 */
+.nav-right {
+    display: flex;
+    gap: 25px;
+    width: 260px;
+    justify-content: flex-end;
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-item.active {
+    color: #855985;
+}
+
+.nav-item.active::after {
+    width: 100%;
+}
+
+/* 主体内容样式 */
+.background {
+    margin-top: 6rem;
+    min-height: calc(100vh - 6rem);
+    background-color: #EFECF2;
+    overflow: hidden !important;
+}
+
+/* 文字容器定位 */
+.words {
+    padding: 0 4%;
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    display: inline-block;
+    white-space: nowrap;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.title-en {
+    width: 100%;
+    height: 100%;
+}
+
+.title-cn {
+
+    font-family: '华文中宋',
+        'Courier New',
+        Courier,
+        monospace;
+    font-size: 8rem !important;
+    color: #B291C4;
+    position: absolute;
+    left: 5.5%;
+    bottom: 14.3%;
+    z-index: 2;
+    transform: scale(0.8, 1);
+    transform-origin: left;
+    display: inline-block;
+}
+
+/* 按钮定位 */
+.button {
+    position: absolute;
+    text-align: left;
+    width: 18rem;
+    height: 4rem;
+    margin-left: 5.5%;
+    margin-top: 20.5%;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.btn {
+    font-family: "黑体";
+    display: inline-block;
+
+    color: #000;
+    text-decoration: none;
+
+    font-size: 2rem;
+}
+
+.photo {
+    position: fixed;
+    left: 50rem;
+    top: 11rem;
+    width: 57rem;
+    height: auto;
+    z-index: 1;
+
+}
+
+.back-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 卡通容器留出空间 */
+.cartoon {
+    width: 36rem;
+    height: 17.5rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.38);
+    position: relative;
+    margin-top: 25%;
+    margin-left: 5.5%;
+    overflow: hidden;
+}
+
+#liquidCanvas {
+    filter: url(#goo);
+    transform: translateZ(0);
+    position: absolute;
+}
+
+
+/* 下拉菜单样式 */
+
+
+.contact-dropdown-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* 固定间距 */
+    position: relative;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 3.5px;
+}
+
+.dropdown-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    vertical-align: middle;
+}
+
+.dropdown-icon:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    z-index: 1000;
+}
+
+.dropdown-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dropdown-form input,
+.dropdown-form textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+.dropdown-form button {
+    background: #7B3D99;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 激活状态 */
+.dropdown-container.active .dropdown-form {
+    display: block;
+}
