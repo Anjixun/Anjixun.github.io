@@ -115,7 +115,7 @@ class WaterfallFinal {
 
             item.innerHTML = `
                 <div class="it-img">
-                    <img src="./waterimgs/nv${(i % 10) + 1}.jpg" class="it-img-src">
+                    <img src="./images/14.png" class="it-img-src" >
                 </div>
                 <div class="text">
                     <a>${product.name}</a>

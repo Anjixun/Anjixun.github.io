@@ -170,6 +170,10 @@ nav {
     color: #808080;
 }
 
+.side-menu li:hover {
+    background: #f8f8f8;
+}
+
 .menu-icon {
     width: 18px;
     margin-right: 10px;
@@ -274,6 +278,12 @@ nav {
     margin: 30px 10px;
 }
 
+.q-img {
+    height: 40px;
+    width: auto;
+    opacity: 0.15;
+}
+
 /* 滚动板块 */
 .line-1-left,
 .line-1-right {
@@ -307,6 +317,7 @@ nav {
 }
 
 .carousel-item {
+    margin-top: 3%;
     flex: 0 0 100%;
     max-height: 180px;
     display: flex;
@@ -321,6 +332,7 @@ nav {
     max-width: 95%;
     max-height: 95%;
     object-fit: contain;
+    opacity: 0.15;
 }
 
 .carousel-arrow {
@@ -331,8 +343,8 @@ nav {
     background: rgba(118, 61, 153, 0.7);
     border: none;
     color: white;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
@@ -342,6 +354,16 @@ nav {
 
 .carousel-arrow:hover {
     background: #763d99;
+}
+
+.carousel-arrow img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.carousel-arrow img:hover {
+    opacity: 1;
 }
 
 .prev {
@@ -382,8 +404,20 @@ nav {
     border-radius: 9px;
     background: #f9f9f9;
     display: flex;
+    gap: 10px;
     justify-content: center;
     align-items: center;
+}
+
+.line-2 img {
+    height: 80%;
+    width: auto;
+    opacity: 0.5;
+}
+
+.line-2 p {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 
@@ -431,17 +465,16 @@ nav {
 
 .line-3 .it-img-src {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+    width: 70%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.line-3 .it-img:hover .it-img-src {
-    transform: scale(1.05);
-}
 
 /* 文本容器 */
 .line-3 .text {

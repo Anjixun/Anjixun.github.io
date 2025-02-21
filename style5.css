@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SimHei", "STHeiti", sans-serif;
+}
+
+nav {
+    background: #efecf2;
+    height: 15vh;
+}
+
+/* 顶部导航 */
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 100%;
+}
+
+/* 左侧Logo */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* 中间搜索区 */
+.center-top {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    width: 40rem;
+    display: flex;
+    background: #ffffff;
+    border: #000000 solid 1px;
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+
+.my-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    background: white;
+    border-radius: 10px;
+    margin: 5px 0;
+    width: 120px;
+    border: #808080 solid 0.1px;
+}
+
+.dropdown-menu li {
+    color: #808080;
+    padding: 5px 15px;
+    list-style: inside;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f8f8f8;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+    margin: 0 15px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 31rem;
+}
+
+.search-icon {
+    width: 20px;
+    margin-left: 0.7rem;
+    cursor: pointer;
+    /* 增加手型光标 */
+    transition: all 0.2s ease;
+    /* 添加过渡动画 */
+}
+
+
+.search-icon:active {
+    transform: scale(0.95);
+    opacity: 0.6;
+}
+
+/* 图标组 */
+.icon-group {
+    display: flex;
+    gap: 20px;
+    margin-left: 10px;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/* 右侧菜单 */
+.nav-right {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle img {
+    width: 24px;
+}
+
+.side-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border: #808080 solid 0.1px;
+    border-radius: 10px;
+    width: 150px;
+    padding: 5px 0;
+}
+
+.side-menu li {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #808080;
+}
+
+.side-menu li:hover {
+    background: #f8f8f8;
+}
+
+.menu-icon {
+    width: 18px;
+    margin-right: 10px;
+}
+
+/* 交互状态 */
+.show {
+    display: block !important;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* 主体部分 */
+.body {
+    font-family: inherit !important;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    /* 改为纵向排列 */
+    gap: 10px;
+    /* 增加行间距 */
+    padding: 20px 0;
+    background-color: #efecf2;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.line-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 5%;
+    height: 250px;
+    border: #763d99 solid 1px;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.line-1-left,
+.line-1-right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.line-1-left-top,
+.line-1-left-bottom {
+    background: #ffffff;
+    width: 90%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333;
+    margin-left: 1rem;
+}
+
+.image-line-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.content-image {
+    width: 30%;
+    max-width: 150px;
+    object-fit: contain;
+    opacity: 0.15;
+}
+
+.lines-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.line {
+    height: 1.5px;
+    background: #000000;
+    border-radius: 2px;
+}
+
+.line-short {
+    width: 50%;
+}
+
+.line-long {
+    width: 80%;
+}
+
+.line-1-center {
+    border: #763d99 solid 1px;
+    box-shadow: inset 0 0 3px #763d99;
+    border-radius: 9px;
+    width: 55%;
+    background-color: #f9f9f9;
+}
+
+/* 轮播容器 */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    margin-top: 3%;
+    flex: 0 0 100%;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.carousel-item img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    opacity: 0.15;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translateY(-50%) translateX(-50%);
+    background: #e4e4e4(118, 61, 153, 0.7);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.3s;
+}
+
+.carousel-arrow:hover {
+    background: #e4e4e4;
+}
+
+.carousel-arrow img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.carousel-arrow img:hover {
+    opacity: 1;
+}
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.carousel-indicators span.active {
+    background: #763d99;
+    transform: scale(1.2);
+}
+
+/* 第二部分样式 */
+.line-2 {
+    width: 90%;
+    margin: 0 auto;
+    background: #efecf2;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-line {
+    flex: none;
+    /* 禁用弹性伸缩 */
+    width: 100px;
+    /* 自定义线条长度 */
+    height: 1px;
+    background: #763d99;
+}
+
+.section-title-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    margin: 0 15px;
+    background: #ffffff;
+
+}
+
+.section-title-2 p {
+    font-size: 1.5rem;
+}
+
+/* 医生网格布局 */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.doctor-item {
+    background-color: white;
+    position: relative;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.doctor-img {
+    width: 80px;
+    height: 80px;
+
+    margin-right: 15px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 16px;
+    background-clip: content-box;
+    z-index: 1;
+}
+
+/* 通过伪元素实现渐变外边框 */
+.doctor-img::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to bottom, #f2f2f2, #b1b1b1);
+    border-radius: 16px;
+    z-index: 0;
+}
+
+.in-img {
+    background: #d9d9d9;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: 99%;
+    z-index: 2;
+    border: white solid 2px;
+}
+
+.in-img img {
+    width: 70%;
+    height: auto;
+}
+
+.doctor-info {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.name-title {
+    font-size: small;
+}
+
+.underline {
+    /* 移除默认下划线 */
+    text-decoration: none;
+    /* 创建相对定位环境 */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    /* 控制下划线距离 */
+}
+
+/* 自定义下划线 */
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    /* 下划线粗细 */
+    background: #000000;
+    /* 下划线颜色 */
+    border-radius: 1px;
+    /* 圆角端点 */
+    transform: scaleX(0.8);
+    /* 长度缩放到80% */
+    transform-origin: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.deco-rect {
+    width: 15px;
+    height: 8px;
+    background: #763d99;
+    opacity: 0.3;
+    border-radius: 7px;
+}
+
+
+/* 查看更多样式 */
+.view-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+}
+
+.more-link {
+    color: #763d99;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.more-link .underline {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    right: 0;
+    height: 3px;
+    background: #763d99;
+    flex: none;
+    /* 禁用弹性伸缩 */
+    width: 90px;
+    /* 自定义线条长度 */
+}
+
+.line-3 {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* 导航栏图标悬停效果 */
+.icon:hover,
+.menu-toggle:hover img {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 2px 4px rgba(118, 61, 153, 0.2));
+    transition: all 0.3s ease;
+}
+
+/* 搜索容器悬停效果 */
+.search-container:hover {
+    box-shadow: 0 4px 12px rgba(118, 61, 153, 0.15);
+    transform: translateY(-1px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 内容卡片悬停效果 */
+.line-1-left-top:hover,
+.line-1-left-bottom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(118, 61, 153, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 评分装饰条动效 */
+.doctor-item:hover .deco-rect {
+    opacity: 0.6;
+    transform: translateX(3px);
+    transition: all 0.3s ease;
+}
+
+/* 底部LOGO悬停 */
+.logo-img:hover {
+    animation: logoBounce 0.6s ease;
+}
+
+@keyframes logoBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* 医生卡片边框悬停效果 */
+.doctor-item {
+    position: relative;
+    border: 2px solid transparent;
+    /* 预置透明边框占位 */
+}
+
+.doctor-item:hover {
+    border-color: #763d99;
+    transform: translateY(-2px);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* 通过伪元素实现渐变边框动画 */
+.doctor-item:hover::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    animation: borderFlow 1.5s infinite;
+    z-index: -1;
+}
+
+@keyframes borderFlow {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 保持布局稳定 */
+.doctor-item {
+    box-sizing: content-box;
+    /* 隔离边框影响 */
+    margin: -2px;
+    /* 抵消新增边框占位 */
+}
+
+.doctor-grid {
+    /* 补偿margin偏移 */
+    margin: 2px;
+}

@@ -126,3 +126,6 @@ document.getElementById('one').addEventListener('click', function () {
 document.getElementById('two').addEventListener('click', function () {
     window.location.href = 'index4.html';
 });
+document.getElementById('three').addEventListener('click', function () {
+    window.location.href = 'index5.html';
+});

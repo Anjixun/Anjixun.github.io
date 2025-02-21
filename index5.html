@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专家咨询</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-top">
+            <!-- 左侧Logo -->
+            <div class="nav-left">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">舒语SeeU</span>
+            </div>
+
+            <!-- 中间主体 -->
+            <div class="nav-center">
+                <div class="center-top">
+                    <div class="search-container">
+                        <div class="my-dropdown">
+                            <div class="dropdown-toggle">
+                                <span>我的</span>
+                                <img src="./images/placeholder.png" alt="" class="arrow">
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li>我的经期</li>
+                                <li>我的订阅</li>
+                                <li>我的积分</li>
+                            </ul>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <input type="text" placeholder="艾灸" class="search-input">
+                        <img src="./images/search.png" alt="搜索" class="search-icon">
+                    </div>
+                    <div class="icon-group">
+                        <img src="./images/16.png" class="icon">
+                        <img src="./images/user.png" class="icon">
+                        <img src="./images/6.png" class="icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧菜单 -->
+            <div class="nav-right">
+                <button class="menu-toggle">
+                    <img src="./images/8.png" alt="菜单">
+                </button>
+                <ul class="side-menu">
+                    <li><img src="./images/9.png" class="menu-icon">客服</li>
+                    <li><img src="./images/11.png" class="menu-icon">收藏夹</li>
+                    <li><img src="./images/15.png" class="menu-icon">浏览记录</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 主体内容 -->
+    <div class="body">
+        <div class="line-1">
+            <div class="line-1-left">
+                <div class="line-1-left-top">
+                    <div class="item">
+                        <p class="section-title">体检检测</p>
+                        <div class="image-line-container">
+                            <img src="./images/14.png" class="content-image">
+                            <div class="lines-wrapper">
+                                <div class="line line-short"></div>
+                                <div class="line line-long"></div>
+                                <div class="line line-long"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-1-left-bottom">
+                    <div class="item">
+                        <p class="section-title">美容护理</p>
+                        <div class="image-line-container">
+                            <img src="./images/14.png" class="content-image">
+                            <div class="lines-wrapper">
+                                <div class="line line-short"></div>
+                                <div class="line line-long"></div>
+                                <div class="line line-long"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-1-center">
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <div class="carousel-item">
+                            <h3>专家专业内容分享</h3>
+                            <img src="./images/14.png" alt="产品1">
+                            <button class="carousel-arrow">
+                                <img src="./images/next.png" alt="播放">
+                            </button>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>专家专业内容分享</h3>
+                            <img src="./images/14.png" alt="产品2">
+                            <button class="carousel-arrow">
+                                <img src="./images/next.png" alt="播放">
+                            </button>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>专家专业内容分享</h3>
+                            <img src="./images/14.png" alt="产品3">
+                            <button class="carousel-arrow">
+                                <img src="./images/next.png" alt="播放">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+            <div class="line-1-right">
+                <div class="line-1-left-top">
+                    <div class="item">
+                        <p class="section-title">限时福利</p>
+                        <div class="image-line-container">
+                            <img src="./images/14.png" class="content-image">
+                            <div class="lines-wrapper">
+                                <div class="line line-short"></div>
+                                <div class="line line-long"></div>
+                                <div class="line line-long"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-1-left-bottom">
+                    <div class="item">
+                        <p class="section-title">专家贴士</p>
+                        <div class="image-line-container">
+                            <img src="./images/14.png" class="content-image">
+                            <div class="lines-wrapper">
+                                <div class="line line-short"></div>
+                                <div class="line line-long"></div>
+                                <div class="line line-long"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-2">
+            <!-- 妇科标题 -->
+            <div class="section-header">
+                <div class="header-line"></div>
+                <div class="section-title-2">
+                    <p>妇科</p>
+                </div>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- 医生列表 -->
+            <div class="doctor-grid">
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+
+                <!-- 最后一个查看更多 -->
+                <div class="doctor-item view-more">
+                    <a href="#" class="more-link">
+                        查看更多
+                        <div class="underline"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="line-2">
+            <!-- 美颜标题 -->
+            <div class="section-header">
+                <div class="header-line"></div>
+                <div class="section-title-2">
+                    <p>美颜</p>
+                </div>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- 医生列表 -->
+            <div class="doctor-grid">
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+
+                <!-- 最后一个查看更多 -->
+                <div class="doctor-item view-more">
+                    <a href="#" class="more-link">
+                        查看更多
+                        <div class="underline"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="line-2">
+            <!-- 心理标题 -->
+            <div class="section-header">
+                <div class="header-line"></div>
+                <div class="section-title-2">
+                    <p>心理</p>
+                </div>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- 医生列表 -->
+            <div class="doctor-grid">
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img">
+                        <div class="in-img">
+                            <img src="./images/user2.png" alt="医生">
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="name-title">
+                            <span class="underline">姓名</span>
+                            <span class="underline">级别（主任医师/副主任医师）</span>
+                        </div>
+                        <div class="rating">
+                            <img src="./images/17.png" class="star-icon">
+                            <span>4.9</span>
+                            <div class="deco-rect"></div>
+                            <div class="deco-rect"></div>
+                        </div>
+                        <div class="line line-long"></div>
+                    </div>
+                </div>
+
+
+                <!-- 最后一个查看更多 -->
+                <div class="doctor-item view-more">
+                    <a href="#" class="more-link">
+                        查看更多
+                        <div class="underline"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="line-3">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">舒语SeeU</span>
+        </div>
+    </div>
+
+</body>
+<script src="script5.js"></script>
+
+</html>
