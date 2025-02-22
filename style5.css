@@ -218,10 +218,10 @@ nav {
     justify-content: space-between;
     width: 90%;
     margin: 0 5%;
-    height: 300px;
+    height: 350px;
     border: #763d99 solid 1px;
     border-radius: 16px;
-    padding: 15px 5px;
+    padding: 20px 5px;
 }
 
 .line-1-left,
@@ -231,7 +231,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .line-1-left-top,
@@ -316,9 +316,8 @@ nav {
 
 .carousel-item {
     position: relative;
-    margin-top: 3%;
     flex: 0 0 100%;
-    max-height: 180px;
+    max-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,14 +336,13 @@ nav {
 .carousel-arrow {
     position: absolute;
     top: 50%;
-    left: 50%;
-    margin: auto;
-    transform: translateY(-50%) translateX(-50%);
-    background: #e4e4e4(118, 61, 153, 0.7);
+    margin: auto 5%;
+    transform: translateY(-50%);
+    background: transparent;
     border: none;
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
@@ -352,9 +350,7 @@ nav {
     transition: background 0.3s;
 }
 
-.carousel-arrow:hover {
-    background: #e4e4e4;
-}
+
 
 .carousel-arrow img {
     width: 100%;
@@ -364,6 +360,18 @@ nav {
 
 .carousel-arrow img:hover {
     opacity: 1;
+}
+
+.carousel-arrow img:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
 }
 
 

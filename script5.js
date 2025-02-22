@@ -78,6 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 箭头事件
+    document.querySelector('.prev').addEventListener('click', () => {
+        goToSlide((currentIndex - 1 + items.length) % items.length);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        goToSlide((currentIndex + 1) % items.length);
+    });
+
+    function goToSlide(index) {
+        currentIndex = index;
+        container.style.transform = `translateX(-${index * 100}%)`;
+        document.querySelectorAll('.carousel-indicators span').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
     // 自动轮播
     setInterval(() => goToSlide((currentIndex + 1) % items.length), 5000);
 });
