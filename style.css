@@ -24,19 +24,20 @@
 .nav-left {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 15px;
     width: 260px;
     /* 固定左侧宽度 */
 }
 
 .logo-img {
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
 .logo-text {
     font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
-    font-size: 25pt;
+    font-size: 25px;
     font-weight: bold;
     color: #333;
 }

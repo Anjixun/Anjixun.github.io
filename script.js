@@ -4,9 +4,9 @@ const config = {
     bubbleSize: 48,
     spawnInterval: 600,
     maxOffset: 80,
-    fixedBubbles: 12,
+    fixedBubbles: 5,
     fixedBubbleSize: 48,
-    fixedAreaHeight: 0.2
+    fixedAreaHeight: 0.25
 };
 
 function toggleDropdown() {

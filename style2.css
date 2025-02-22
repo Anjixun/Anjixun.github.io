@@ -29,7 +29,27 @@ a {
     z-index: 1000;
 }
 
-.nav-left,
+.nav-left {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.logo-img {
+    height: 35px;
+    /* 根据实际图片比例调整 */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 1.7rem !important;
+    font-weight: bold;
+    color: #333;
+}
+
 .nav-center {
     display: flex;
     align-items: center;
@@ -63,11 +83,8 @@ a {
     border-radius: 7px 7px 7px 7px;
 }
 
-.logo-img {
-    width: 40px;
-    height: 40px;
-    background: transparent;
-}
+
+
 
 .nav-center a {
     text-decoration: none;
@@ -370,35 +387,42 @@ a {
     height: 24px;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s ease;
 }
 
-.like-btn .heart::before,
-.like-btn .heart::after {
-    content: '';
+.like-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.heart-icon {
     position: absolute;
-    left: 12px;
-    width: 12px;
-    height: 20px;
-    background: #ccc;
-    border-radius: 12px 12px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-origin: center;
 }
 
-.like-btn .heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
+#heartEmpty {
+    opacity: 1;
 }
 
-/* 点击后效果 */
-.like-btn.active .heart::before,
-.like-btn.active .heart::after {
-    background: #ff3860;
+#heartFilled {
+    opacity: 0;
+    transform: scale(0);
 }
 
-.like-btn.active .heart {
+.like-btn.active #heartEmpty {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.like-btn.active #heartFilled {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.like-btn:active .heart-icon {
     transform: scale(1.2);
 }

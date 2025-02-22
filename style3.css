@@ -25,21 +25,22 @@
 /* 左侧Logo区域 */
 .nav-left {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 15px;
-    width: 260px;
+    width: 300px;
     /* 固定左侧宽度 */
 }
 
 .logo-img {
-    height: 50px;
+    height: 40px;
     /* 根据实际图片比例调整 */
     width: auto;
 }
 
 .logo-text {
     font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     font-weight: bold;
     color: #333;
 }

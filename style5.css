@@ -7,7 +7,7 @@
 
 nav {
     background: #efecf2;
-    height: 15vh;
+    height: 6rem;
 }
 
 /* 顶部导航 */
@@ -21,20 +21,24 @@ nav {
 
 /* 左侧Logo */
 .nav-left {
+    width: 250px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    justify-content: flex-end;
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    height: 35px;
+    /* 根据实际图片比例调整 */
+    width: auto;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    font-size: 1.7rem !important;
     font-weight: bold;
-    color: #000000;
+    color: #333;
 }
 
 /* 中间搜索区 */
@@ -199,7 +203,6 @@ nav {
     /* 改为纵向排列 */
     gap: 10px;
     /* 增加行间距 */
-    padding: 20px 0;
     background-color: #efecf2;
 }
 
@@ -214,11 +217,11 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: 2% 5%;
+    margin: 0 5%;
     height: 250px;
     border: #763d99 solid 1px;
-    border-radius: 9px;
-    padding: 10px;
+    border-radius: 16px;
+    padding: 15px 5px;
 }
 
 .line-1-left,
@@ -228,7 +231,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .line-1-left-top,
@@ -292,8 +295,6 @@ nav {
 }
 
 .line-1-center {
-    border: #763d99 solid 1px;
-    box-shadow: inset 0 0 3px #763d99;
     border-radius: 9px;
     width: 55%;
     background-color: #f9f9f9;

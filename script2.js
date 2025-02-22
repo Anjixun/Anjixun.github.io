@@ -35,6 +35,11 @@ class Waterfall {
             const likeBtn = e.target.closest('.like-btn');
             if (likeBtn) {
                 likeBtn.classList.toggle('active');
+                // 添加弹性动画
+                likeBtn.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    likeBtn.style.transform = 'scale(1)';
+                }, 200);
             }
         });
     }
