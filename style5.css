@@ -583,9 +583,10 @@ nav {
 }
 
 .line-3 {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
+    gap: 2rem;
+    margin: 1rem auto 2rem auto;
 }
 
 /* 导航栏图标悬停效果 */
