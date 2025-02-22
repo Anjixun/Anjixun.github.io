@@ -188,7 +188,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 .nav-link {
@@ -222,7 +222,7 @@ nav {
     /* 改为纵向排列 */
     gap: 10px;
     /* 增加行间距 */
-    padding: 20px 0;
+    /* padding: 20px 0; */
     background-color: #efecf2;
 }
 
