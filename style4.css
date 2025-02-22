@@ -8,7 +8,7 @@
 
 nav {
     background: #efecf2;
-    height: 15vh;
+    height: 13vh;
 }
 
 /* 顶部导航 */
@@ -188,7 +188,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 40px;
-    /* padding: 1rem 0; */
+    padding: 0.1rem 0 0 0;
 }
 
 .nav-link {
