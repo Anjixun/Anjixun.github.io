@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         sideMenu.classList.remove('show');
         arrow.classList.remove('rotate');
     });
+
+    document.querySelectorAll('.doctor-item').forEach(item => {
+        const priceElement = item.querySelector('.price-display');
+        const randomPrice = Math.floor(Math.random() * 181) + 20; // 20-200
+        priceElement.textContent = `¥${randomPrice}`;
+    });
 });
 // 添加键盘支持
 function initSearch() {

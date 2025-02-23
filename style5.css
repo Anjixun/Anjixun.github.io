@@ -592,6 +592,15 @@ nav {
     border-radius: 7px;
 }
 
+.price-display {
+    font-size: 1.2rem;
+    color: #763d99;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
 
 /* 查看更多样式 */
 .view-more {
