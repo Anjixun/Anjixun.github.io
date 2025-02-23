@@ -702,32 +702,6 @@ nav {
         transform 0.3s ease;
 }
 
-/* 通过伪元素实现渐变边框动画 */
-.doctor-item:hover::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 20px;
-    animation: borderFlow 1.5s infinite;
-    z-index: -1;
-}
-
-@keyframes borderFlow {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
 
 /* 保持布局稳定 */
 .doctor-item {

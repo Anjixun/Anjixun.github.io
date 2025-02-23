@@ -517,13 +517,6 @@ nav {
 }
 
 
-@media (max-width: 1920px) {
-    .line-3 .item {
-        width: calc(16.666% - 17px);
-    }
-
-}
-
 @media (max-width: 1200px) {
     .line-3 .item {
         width: calc(25% - 15px);

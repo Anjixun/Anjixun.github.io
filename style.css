@@ -262,14 +262,6 @@
 
 
 /* 功能卡片 */
-
-.service-card,
-.service-card::before,
-.service-card:hover {
-    all: unset;
-}
-
-/* 新卡片容器布局 */
 .card-container {
     display: flex;
     gap: 30px;
@@ -641,10 +633,4 @@
     .new-card p {
         font-size: 16pt;
     }
-}
-
-@font-face {
-    font-family: 'STZhongsong';
-    src: url('path/to/STZhongsong.ttf');
-    /* 需替换为实际字体文件路径 */
 }

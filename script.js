@@ -58,6 +58,11 @@ window.addEventListener('load', () => {
 function createImageElement() {
     const img = new Image();
     img.className = 'bubble-img';
+    img.alt = '动态气泡';
+    img.onerror = () => {
+        console.error('图片加载失败:', img.src);
+        img.src = 'https://placehold.co/48x48'; // 备用图片
+    };
     img.src = config.images[Math.random() * config.images.length | 0];
     return img;
 }
@@ -98,18 +103,6 @@ function createFixedBubbles() {
         bubble.appendChild(createImageElement());
         bigCircle.appendChild(bubble);
     }
-}
-
-function createImageElement() {
-    const img = new Image();
-    img.className = 'bubble-img';
-    img.alt = '动态气泡';
-    img.onerror = () => {
-        console.error('图片加载失败:', img.src);
-        img.src = 'https://placehold.co/48x48'; // 备用图片
-    };
-    img.src = config.images[Math.random() * config.images.length | 0];
-    return img;
 }
 
 let bubbleCounter = 0;

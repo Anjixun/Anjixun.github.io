@@ -75,15 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         indicators.appendChild(dot);
     });
 
-
-    function goToSlide(index) {
-        currentIndex = index;
-        container.style.transform = `translateX(-${index * 100}%)`;
-        document.querySelectorAll('.carousel-indicators span').forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
     // 箭头事件
     document.querySelector('.prev').addEventListener('click', () => {
         goToSlide((currentIndex - 1 + items.length) % items.length);

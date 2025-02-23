@@ -45,11 +45,6 @@
     color: #333;
 }
 
-.nav-links {
-    display: flex;
-    gap: 40px;
-}
-
 /* 中间导航项 */
 .nav-center {
     display: flex;
