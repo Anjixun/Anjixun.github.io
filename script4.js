@@ -121,7 +121,7 @@ class WaterfallFinal {
                     <a>${product.name}</a>
                     <div class="author-icon">
                         <div class="price-container">
-                            <span class="price">￥${product.price.toFixed(2)}</span>
+                            <span class="price">¥${product.price.toFixed(2)}</span>
                             <span class="sales">已售${Math.floor(Math.random() * 500 + 50)}</span>
                         </div>
                     </div>
