@@ -528,8 +528,9 @@ nav {
 }
 
 .in-img img {
-    width: 70%;
-    height: auto;
+    width: 99%;
+    height: 99%;
+    border-radius: 16px;
 }
 
 .doctor-info {
@@ -542,7 +543,7 @@ nav {
 }
 
 .name-title {
-    font-size: small;
+    font-size: 12px;
 }
 
 .underline {
@@ -553,6 +554,73 @@ nav {
     display: inline-block;
     padding-bottom: 3px;
     /* 控制下划线距离 */
+}
+
+.deco-group {
+    flex: 1;
+    min-width: 0;
+    /* 允许内容收缩 */
+}
+
+.introwords {
+    font-size: smaller;
+    /* 保持固定尺寸 */
+    height: 60px;
+    line-height: 1.5;
+    /* 初始化滚动设置 */
+    overflow-y: hidden;
+    /* 默认隐藏滚动条 */
+    padding-right: 12px;
+    /* 为滚动条预留空间 */
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* 修改文本容器为普通块元素 */
+    display: block;
+}
+
+/* 渐变遮罩改进版 */
+.introwords::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 12px;
+    /* 避开滚动条区域 */
+    height: 30px;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.9) 100%);
+    transition: opacity 0.3s;
+}
+
+/* 悬停状态 */
+.introwords:hover {
+    /* 保持原有尺寸 */
+    height: 60px;
+    /* 显示滚动条 */
+    overflow-y: auto;
+}
+
+.introwords:hover::after {
+    opacity: 0;
+    /* 淡出遮罩 */
+}
+
+/* 自定义滚动条样式 */
+.introwords::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.introwords::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+/* 非悬停状态隐藏滚动条 */
+.introwords:not(:hover)::-webkit-scrollbar {
+    display: none;
 }
 
 /* 自定义下划线 */
@@ -573,11 +641,6 @@ nav {
     transform-origin: center;
 }
 
-.rating {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
 .star-icon {
     width: 18px;
@@ -599,6 +662,36 @@ nav {
     display: flex;
     align-items: center;
     height: 20px;
+}
+
+
+.rating-container {
+    display: flex;
+    align-items: flex-start;
+    /* 根据实际需求调整对齐方式 */
+    gap: 12px;
+    /* 控制左右间距 */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* 控制上下元素间距 */
+}
+
+.rating-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* 控制星标和数字间距 */
+}
+
+.deco-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    /* 控制两个装饰矩形的间距 */
 }
 
 

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.doctor-item').forEach(item => {
         const priceElement = item.querySelector('.price-display');
-        const randomPrice = Math.floor(Math.random() * 181) + 20; // 20-200
+        const randomPrice = 50
         priceElement.textContent = `¥${randomPrice}`;
     });
 });
@@ -59,6 +59,8 @@ function initSearch() {
 window.addEventListener('load', () => {
     initSearch();
 })
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // 轮播功能
