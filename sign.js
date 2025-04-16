@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     console.log('登录信息：', { username, password, captcha });
 
 
-    window.location.href = 'index.html';
+    window.location.href = 'index3.html';
 
     alert('登录成功！正在跳转...');
 });
