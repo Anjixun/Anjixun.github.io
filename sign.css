@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('./images/b1.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 75%;
+    height: 80vh;
+    background: url('./images/b2.png') no-repeat center center/cover;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 1px 1px 150px 1px;
+    box-shadow:
+        5px 5px 15px rgba(0, 0, 0, 0.2),
+        /* 基础阴影层 */
+        10px 10px 25px -5px rgba(0, 0, 0, 0.2);
+    /* 定向阴影层 */
+    display: flex;
+
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    background: transparent;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin-bottom: 15px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+#loginForm {
+    width: 80%;
+    height: 70%;
+    box-shadow:
+        5px 5px 15px rgba(0, 0, 0, 0.15),
+        /* 基础阴影层 */
+        10px 10px 25px -5px rgba(0, 0, 0, 0.15);
+    /* 定向阴影层 */
+    border-radius: 12px;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+#loginForm .title {
+    text-align: center;
+    color: #7B3D99;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    width: 100%;
+    display: block;
+}
+
+.input-group {
+    position: relative;
+    margin: 25px 0 20px 0;
+}
+
+.password-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* 调整输入框右侧填充 */
+.input-group input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    /* 右侧增加填充 */
+    border: 0;
+    border-radius: 13px;
+    outline: none;
+    font-size: 12px;
+    background-color: #f2f1f8;
+}
+
+/* 悬停效果 */
+.password-icon:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 13px;
+    outline: none;
+    font-size: 12px;
+    background-color: #f2f1f8;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b697c8;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #7b3d99;
+}
+
+/* 验证码相关样式 */
+.captcha-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.captcha-box {
+    width: 35%;
+    background: #f2f1f8;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7b3d99;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.captcha-box:hover {
+    background: #e6e5eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.options input[type="checkbox"] {
+    /* 隐藏原生复选框 */
+    opacity: 0;
+    position: absolute;
+}
+
+.options label {
+    position: relative;
+    padding-left: 28px;
+    color: #9c6eb3;
+    cursor: pointer;
+}
+
+/* 自定义复选框 */
+.options label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-40%) translateX(80%);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #b08bc2;
+    border-radius: 1px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* 选中状态 */
+.options input[type="checkbox"]:checked+label::before {
+    background: #7b3d99;
+    border-color: #7b3d99;
+}
+
+/* 勾选标记 */
+.options label::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    /* 关键修改：重新定位 */
+    top: 47%;
+    transform: translateY(-50%) translateX(190%) rotate(45deg);
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.options input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+
+.options a {
+    color: #9c6eb3;
+    margin-left: 15px;
+    text-decoration: underline 0.5px solid;
+}
+
+.options a:hover {
+    color: #7b3d99;
+}
+
+button {
+    width: 100%;
+    padding: 5px;
+    background: #7b3d99;
+    color: white;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #7b3d99;
+}
+
+
+
+.other-login span {
+    color: #b697c8;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* 控制图标间距 */
+    margin-top: 15px;
+}
+
+.login-icon {
+    width: 20px;
+    /* 控制图标尺寸 */
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.login-icon:hover {
+    transform: scale(1.1);
+    /* 悬停放大效果 */
+}
