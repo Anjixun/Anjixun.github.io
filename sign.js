@@ -16,7 +16,6 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     window.location.href = 'index3.html';
 
-    alert('登录成功！正在跳转...');
 });
 
 document.querySelector('.password-icon').addEventListener('click', function () {
