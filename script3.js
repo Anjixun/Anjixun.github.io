@@ -162,5 +162,5 @@ document.querySelectorAll('.dropdown-container').forEach(container => {
 });
 
 document.getElementById('btn').addEventListener('click', function () {
-    window.location.href = 'index.html';
+    window.location.href = 'sign.html';
 });
